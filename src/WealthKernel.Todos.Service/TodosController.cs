@@ -11,7 +11,7 @@ namespace WealthKernel.Todos.Service;
 [ApiController]
 public class TodosController : ControllerBase
 {
-
+    // defined in Program with Ioc 
     private readonly InMemoryTodosRepository _repository;
 
     public TodosController(InMemoryTodosRepository respository)
@@ -19,7 +19,6 @@ public class TodosController : ControllerBase
         _repository = respository;
     }
 
-    //api/todo?id=1
     [HttpGet("api/todo")]
     public async Task<ActionResult<Todo>> GetTodo([FromQuery] string id)
     {
@@ -41,10 +40,7 @@ public class TodosController : ControllerBase
         
     }
 
-    //api/alltodos
-
-    //public async Task<Todo> GetTodo()
-    //api/todo?id=1
+    
     [HttpPost("api/addtodo")]
     public async Task<ActionResult> AddTodo([FromBody] Todo todo)
     {
