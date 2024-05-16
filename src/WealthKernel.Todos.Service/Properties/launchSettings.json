@@ -1,0 +1,11 @@
+﻿{
+  "profiles": {
+    "WealthKernel.Todos.Service": {
+      "commandName": "Project",
+      "applicationUrl": "http://localhost:22222",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
